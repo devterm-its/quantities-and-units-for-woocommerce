@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Quantities and Units for WooCommerce
-Plugin URI: https://wordpress.org/plugins/quantities-and-units-for-woocommerce/
+Plugin URI: https://github.com/devterm-its/quantities-and-units-for-woocommerce/
 Description: Easily require your customers to buy a minimum / maximum / incremental amount of products to continue with their checkout.
 Version: 1.1.0
-Author: Nicholas Verwymeren
-Author URI: https://www.nickv.codes
+Author: devterm IT Solutions GmbH & Co. KG, Nicholas Verwymeren
+Author URI: https://devterm.de
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
