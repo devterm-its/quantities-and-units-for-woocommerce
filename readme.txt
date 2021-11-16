@@ -70,6 +70,9 @@ Manual Installation
 6. Set Rules for categories by clicking the new ‘Quantity Rules’ sidebar option or assign per-product rules by using the new metabox on your product page.
 
 == Changelog ==
+= 1.1.0 =
+* Added a function to externally get a product unit instance
+
 = 1.0.13 =
 * Fixed input issue introduced in 10.0.12 release
 
