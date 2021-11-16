@@ -34,6 +34,12 @@ class WC_Quantities_and_Units {
 		return self::$_instance;
 	}
 
+	private $product_unit;
+
+	public function product_unit() {
+		return $this->product_unit;
+	}
+
 	public function __construct() {
 
 		// Activation / Deactivation Hooks
@@ -50,7 +56,7 @@ class WC_Quantities_and_Units {
 		require_once( 'includes/class-wcqu-validations.php' );
 		require_once( 'includes/class-wcqu-advanced-rules.php' );
 		require_once( 'includes/class-wcqu-units-box.php' );
-		require_once( 'includes/class-wcqu-product-unit.php' );
+		$this->product_unit = require_once( 'includes/class-wcqu-product-unit.php' );
 
 		// Add Scripts and styles
 		add_action( 'wp_enqueue_scripts', array( $this, 'input_value_validation' ) );
