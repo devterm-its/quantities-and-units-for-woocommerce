@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Quantities and Units for WooCommerce
-Plugin URI: https://wordpress.org/plugins/quantities-and-units-for-woocommerce/
+Plugin URI: https://github.com/devterm-its/quantities-and-units-for-woocommerce/
 Description: Easily require your customers to buy a minimum / maximum / incremental amount of products to continue with their checkout.
-Version: 1.0.13
-Author: Nicholas Verwymeren
-Author URI: https://www.nickv.codes
+Version: 1.1.0
+Author: devterm IT Solutions GmbH & Co. KG, Nicholas Verwymeren
+Author URI: https://devterm.de
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -34,6 +34,12 @@ class WC_Quantities_and_Units {
 		return self::$_instance;
 	}
 
+	private $product_unit;
+
+	public function product_unit() {
+		return $this->product_unit;
+	}
+
 	public function __construct() {
 
 		// Activation / Deactivation Hooks
@@ -50,7 +56,7 @@ class WC_Quantities_and_Units {
 		require_once( 'includes/class-wcqu-validations.php' );
 		require_once( 'includes/class-wcqu-advanced-rules.php' );
 		require_once( 'includes/class-wcqu-units-box.php' );
-		require_once( 'includes/class-wcqu-product-unit.php' );
+		$this->product_unit = require_once( 'includes/class-wcqu-product-unit.php' );
 
 		// Add Scripts and styles
 		add_action( 'wp_enqueue_scripts', array( $this, 'input_value_validation' ) );
